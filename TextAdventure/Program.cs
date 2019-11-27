@@ -28,7 +28,7 @@ namespace TextAdventure
             Console.WriteLine("Access Granted");
             Console.ReadLine();
             Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine($"Welcome {yourName}. Information on the Phanotom is limited. There are only two known facts, 1. It only shows itself when people are around. No images or drone footage have been captured of it. 2. The only sign that the Phantom is present is the carving of P H N T M on tress around the park. No one has gone missing until now. Your job is to find Jake and uncover the mystery behind this Phantom. Good Luck!");
+            Console.WriteLine($"Welcome {yourName}. Information on the Phanotom is limited. There are only two known facts, 1. It has never been seen but merely felt. No images or drone footage has been captured of it. 2. The only sign that the Phantom is present is the carving of P H N T M on tress around the park. No one has gone missing until now. Your job is to find Jake and uncover the mystery behind this Phantom. Good Luck!");
             Console.WriteLine("Press 'Enter' to being.");
             Console.ReadLine();
             Console.Clear();
@@ -56,7 +56,7 @@ namespace TextAdventure
                         Console.WriteLine("An older man about 57 stepped out from the back room. He wore a faded blue shirt with a dip can in one pocket.");
                         Console.WriteLine("What can I do for ya?");
                         Console.WriteLine("I'm looking for this man, Jake Morsono. He was last seen 3 days ago here.");
-                        Console.WriteLine("Yeah, I remember him. Reminds me of my own boy, if he were still alive. Can't tell ya where he went tho. He wouldn't even tell me that. Did say somethin 'bout findin the thing that always haunts him. Got no idea what that was 'bout.");
+                        Console.WriteLine("Yeah, I remember him. Reminds me of my own boy. Can't tell ya where he went tho. Did say somethin 'bout findin the thing that always haunts him. Got no idea what that was 'bout.");
                         Console.ReadLine();
                         third();
                         break;
@@ -98,7 +98,7 @@ namespace TextAdventure
             string secChoice;
 
             Console.WriteLine(secText);
-            Console.WriteLine("You follow your instinct.");
+            Console.WriteLine("Do you follow your instinct?");
             Console.WriteLine("Yes or No?");
             Console.WriteLine("Choice: ");
             secChoice = Console.ReadLine().ToLower();
@@ -142,7 +142,7 @@ namespace TextAdventure
             string choice;
 
                 Console.WriteLine("You take off for the figure and chase him for 2 miles, weaving in and out of the trees.");
-                Console.WriteLine("A branch catches the side of his mask and rips it off but he doesn't stop and disappears.");
+                Console.WriteLine("A branch catches the side of the figure's mask and rips it off but the figure doesn't stop and disappears before you can see where it went.");
                 Console.WriteLine("You stoop to pick up the mask.");
                 Console.WriteLine("There is a tiny strand of hair attached to the corner.");
                 Console.WriteLine("1. You take the strand of hair to a lab");
@@ -155,10 +155,10 @@ namespace TextAdventure
                 {
                     case "1":
                         {
-                            Console.WriteLine("You drive to the nearest lab at the local police station.");
+                            Console.WriteLine("You drive to the lab at the local police station.");
                             Console.WriteLine("They say they'll look into it right away and get back with you in 24 hours.");
                             Console.WriteLine("You decide to look up Jake's best friend, Bedford while you wait.");
-                            
+                            seventh();
                             break;
                         }
 
@@ -217,6 +217,13 @@ namespace TextAdventure
             Console.WriteLine("You decend the stairs and stand face to face with Jake.");
             second();
 
+        }
+
+        public static void seventh()
+        {
+            Console.WriteLine("Bedford isn't home and the lab frames you as the Phantom.");
+            gameOver();
+            
         }
 
         public static void gameOver()
